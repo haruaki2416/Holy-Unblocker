@@ -4,6 +4,8 @@ services:
     env: node
     plan: free
     region: oregon
+    repo: https://github.com/haruaki2416/Holy-Unblocker
+    branch: master
     buildCommand: npm install
     startCommand: node backend.js
     envVars:
