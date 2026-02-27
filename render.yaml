@@ -1,8 +1,13 @@
 services:
   - type: web
-    runtime: docker
-    name: hu-lts
-    repo: https://github.com/QuiteAFancyEmerald/Holy-Unblocker
-    region: oregon
+    name: cloud-app
+    env: node
     plan: free
-    branch: master
+    region: oregon
+    buildCommand: npm install
+    startCommand: node backend.js
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
